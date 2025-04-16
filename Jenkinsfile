@@ -14,12 +14,6 @@ pipeline {
             }
         }
 
-        // stage('Generate HTML Report') {
-        //     steps {
-        //         bat 'jmeter -g result.jtl -o jmeter-report'
-        //     }
-        // }
-
         // stage('Publish Results') {
         //     steps {
         //         publishHTML([
@@ -31,6 +25,6 @@ pipeline {
         //             keepAll: true
         //         ])
         //     }
-        }
+        // }
     }
 }
