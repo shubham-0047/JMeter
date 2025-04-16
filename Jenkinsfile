@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run JMeter Test') {
             steps {
-                sh 'jmeter -n -t test.jmx -l result.jtl'
+                bat 'jmeter -n -t test.jmx -l result.jtl'
             }
         }
 
