@@ -14,13 +14,21 @@ pipeline {
             }
         }
 
+        stage('Generate HTML Report') {
+            steps {
+                bat 'jmeter -g result.jtl -o jmeter-report'
+            }
+        }
+
         stage('Publish Results') {
             steps {
-                // Assuming you install HTML Publisher plugin
                 publishHTML([
-                    reportDir: '.',
-                    reportFiles: 'result.jtl',
-                    reportName: 'JMeter Test Results'
+                    reportDir: 'jmeter-report',
+                    reportFiles: 'index.html',
+                    reportName: 'JMeter Performance Report',
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true
                 ])
             }
         }
