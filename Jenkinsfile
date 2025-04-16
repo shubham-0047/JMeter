@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run JMeter Test') {
             steps {
-                bat 'jmeter -n -t test.jmx -l result.jtl'
+                bat 'jmeter -n -t C:\Users\Administrator\Desktop\Chaos\test.jmx -l result.jtl'
             }
         }
 
