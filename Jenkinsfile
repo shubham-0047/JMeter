@@ -20,17 +20,17 @@ pipeline {
             }
         }
 
-        stage('Publish Results') {
-            steps {
-                publishHTML([
-                    reportDir: 'jmeter-report',
-                    reportFiles: 'index.html',
-                    reportName: 'JMeter Performance Report',
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true
-                ])
-            }
+        // stage('Publish Results') {
+        //     steps {
+        //         publishHTML([
+        //             reportDir: 'jmeter-report',
+        //             reportFiles: 'index.html',
+        //             reportName: 'JMeter Performance Report',
+        //             allowMissing: false,
+        //             alwaysLinkToLastBuild: true,
+        //             keepAll: true
+        //         ])
+        //     }
         }
     }
 }
