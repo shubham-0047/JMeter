@@ -17,7 +17,7 @@ pipeline {
         stage('Run JMeter Test') {
             steps {
                 // Run JMeter test in non-GUI mode
-                bat "C:\\Users\\Administrator\\Desktop\\apache-jmeter-5.6.3\\apache-jmeter-5.6.3\\bin\\jmeter.bat" -n -t test.jmx -l result.jtl'
+                bat '"C:\\Users\\Administrator\\Desktop\\apache-jmeter-5.6.3\\apache-jmeter-5.6.3\\bin\\jmeter.bat" -n -t test.jmx -l result.jtl'
             }
         }
 
