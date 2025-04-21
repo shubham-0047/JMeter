@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Set JMeter installation path if it's not globally set in your environment variables
-        JMETER_HOME = 'C:\\path\\to\\jmeter'  // Replace with the correct path
+        JMETER_HOME = 'C:\\Users\\Administrator\\Desktop\\apache-jmeter-5.6.3\\apache-jmeter-5.6.3\\bin\\jmeter.bat'  // Replace with the correct path
     }
 
     stages {
